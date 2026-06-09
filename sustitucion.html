@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Integral por Sustitución</title>
+
+<style>
+
+body{
+
+font-family:Arial;
+
+padding:20px;
+
+background:#fff3cd;
+
+}
+
+.caja{
+
+background:white;
+
+padding:20px;
+
+border-radius:10px;
+
+max-width:500px;
+
+margin:auto;
+
+}
+
+input,button{
+
+width:100%;
+
+padding:12px;
+
+margin-top:10px;
+
+}
+
+button{
+
+background:#ff9800;
+
+color:white;
+
+border:none;
+
+}
+
+#resultado{
+
+margin-top:20px;
+
+font-size:18px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="caja">
+
+<h1>Integral por Sustitución</h1>
+
+<p>Ingresa el exponente de u.</p>
+
+<input id="numero" placeholder="Ejemplo: 2">
+
+<button onclick="resolver()">
+
+Resolver
+
+</button>
+
+<div id="resultado"></div>
+
+</div>
+
+<script>
+
+function resolver(){
+
+let n = parseInt(document.getElementById("numero").value);
+
+if(isNaN(n)){
+
+document.getElementById("resultado").innerHTML =
+
+"Escribe un número";
+
+return;
+
+}
+
+let nuevoExp = n + 1;
+
+document.getElementById("resultado").innerHTML =
+
+"<b>Procedimiento:</b><br>" +
+
+"Sea u = x² + 1<br>" +
+
+"du = 2x dx<br><br>" +
+
+"∫u^" + n + " du = (1/" +
+
+nuevoExp + ")u^" +
+
+nuevoExp +
+
+" + C";
+
+}
+
+</script>
+
+</body>
+
+</html>
